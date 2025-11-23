@@ -1,0 +1,27 @@
+services:
+  # Backend Service
+  - type: web
+    name: bookswipe-backend
+    env: docker
+    dockerfilePath: ./Dockerfile.backend
+    plan: free
+    region: singapore # or oregon, frankfurt, etc.
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: OPENAI_API_KEY
+        sync: false # User will need to input this in dashboard if needed
+
+  # Frontend Static Site
+  - type: web
+    name: bookswipe-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    plan: free
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: bookswipe-backend
+          property: url
