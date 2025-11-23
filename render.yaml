@@ -21,7 +21,4 @@ services:
     plan: free
     envVars:
       - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: bookswipe-backend
-          property: url
+        value: https://bookswipe-backend.onrender.com # Placeholder: You must update this in the Render Dashboard after deployment!
