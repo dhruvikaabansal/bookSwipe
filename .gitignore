@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+*.log
+
+# Database
+db/app.db
+
+# Node
+node_modules/
+dist/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+
+# Data (exclude large files)
+data/goodbooks-10k/ratings.csv
+data/goodbooks-10k/to_read.csv
+data/raw/
+
+# Artifacts (optional, but good to keep if small enough, excluding if large)
+# artifacts/

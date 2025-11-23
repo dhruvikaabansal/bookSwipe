@@ -1,0 +1,191 @@
+.deck-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-stack {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.glass-card {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+    color: white;
+}
+
+.book-cover-placeholder {
+    flex: 1;
+    background: linear-gradient(135deg, #333 0%, #111 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cover-initial {
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.book-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.book-header h3 {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0.2rem 0 0 0;
+    font-weight: 400;
+}
+
+.match-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+.match-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+.match-value {
+    font-weight: 700;
+    color: #4ade80;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    color: #ccc;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    z-index: 10;
+}
+
+.btn-action {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-pass {
+    background: #ffffff;
+    color: #ff4444;
+}
+
+.btn-like {
+    background: #ffffff;
+    color: #00c853;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+.empty-state {
+    text-align: center;
+    color: white;
+}
+
+.empty-state h2 {
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.btn-refresh {
+    background: white;
+    color: black;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-refresh:hover {
+    transform: scale(1.05);
+}
